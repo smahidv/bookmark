@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { AiFillFacebook, AiOutlineTwitter } from "react-icons/ai";
-import logo from '../../images/logo-bookmark.svg'
+import whiteLogo from '../../images/WHITE-LOGO.png'
 import "./footer.css";
 
 const Footer = () => {
@@ -17,7 +17,7 @@ const Footer = () => {
     <footer>
       <div className="footer-container grid">
         <div className="white-logo">
-          <img src={logo} alt="bookmark logo" />
+          <img src={whiteLogo} alt="bookmark logo" />
         </div>
         <nav>
           <ul className="footer">

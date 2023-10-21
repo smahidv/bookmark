@@ -16,6 +16,7 @@ margin-bottom: 3.5em;
 }
 .faq-section .sub-section .question h4{
    text-align: start;
+   font-size: .78em;
 }
 .faq-section .sub-section .question.active h4 {
     color: red; 

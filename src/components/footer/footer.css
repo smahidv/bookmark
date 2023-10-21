@@ -9,8 +9,11 @@ footer .footer-container{
 .footer-container ul.footer li{
     margin-inline: auto;
 }
+.white-logo {
+width: 50%;
+}
 .icons-footer{
-    gap:10px;
+    gap:20px;
 }
 
 @media (min-width: 720px) {

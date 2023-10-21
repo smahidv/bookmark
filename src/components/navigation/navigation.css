@@ -6,6 +6,9 @@
   justify-content: space-between;
   margin-bottom: 2em;
 }
+.primary-header-2 img{
+  max-width: 200px !important;
+}
 .icon-nav > * {
   cursor: pointer;
   z-index: 22;
@@ -46,6 +49,7 @@ ul.primary-navigation li:nth-child(3):after {
   border-radius: 0.5rem;
   height: 1px;
   background-color: var(--Grayish-Blue);
+  top: 60px;
  
 }
 ul.primary-navigation li:first-child::before,
@@ -65,8 +69,10 @@ li.login-btn {
   padding-block:.4em;
   transform: translateY(1.5em);
   font-weight: var(--f-w-bold);
-
- 
+}
+nav .icons-footer{
+  justify-content: center;
+  margin-top: 20vh;
 }
 @media (min-width: 720px) {
     .navigation-container {

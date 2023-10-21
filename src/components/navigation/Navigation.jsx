@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
 import logo from "../../images/logo-bookmark.svg";
+import whiteLOgo from "../../images/WHITE-LOGO.png";
+import { AiFillFacebook, AiOutlineTwitter } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { HashLink as Link } from "react-router-hash-link";
 import "./navigation.css";
@@ -42,7 +44,11 @@ const Navigation = () => {
     <header>
       <div id="menu-open-bg" className="navigation-container ">
         <div className="primary-header-2 flex">
-          <img src={logo} alt="logo of bookmark" />
+          {!isMenuOpen ? (
+            <img src={logo} alt="logo of bookmark" />
+          ) : (
+            <img src={whiteLOgo} alt="logo of bookmark" />
+          )}
           <div className="icon-nav">
             {isMenuOpen ? (
               <div onClick={toggleMenu} className="close">
@@ -73,9 +79,17 @@ const Navigation = () => {
               </Link>
             </li>
             <li className="login-btn">
-              <Link  to="/login" onClick={toggleMenu}>login</Link>
+              <Link to="/login" onClick={toggleMenu}>
+                login
+              </Link>
             </li>
           </ul>
+          {isMenuOpen && (
+            <div className="icons-footer flex ">
+              <AiFillFacebook style={{ color: "white" }} />
+              <AiOutlineTwitter style={{ color: "white" }} />
+            </div>
+          )}
         </nav>
       </div>
     </header>
