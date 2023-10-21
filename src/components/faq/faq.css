@@ -1,0 +1,45 @@
+.faq-container button.blue-btn{
+    width: fit-content !important;
+    margin-inline: auto;
+}
+.faq-section{
+margin-bottom: 3.5em;
+}
+.faq-section .sub-section .response,
+.faq-section .sub-section .question{
+    justify-content: space-between;
+   
+}
+.faq-section .sub-section .question{
+    position: relative;
+    margin-top: 2em;
+}
+.faq-section .sub-section .question h4{
+   text-align: start;
+}
+.faq-section .sub-section .question.active h4 {
+    color: red; 
+  }
+.faq-section .sub-section .question::after{
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 1px;
+   bottom: -1em;
+   background-color: var(--box-shadow-color);
+}
+.faq-section .sub-section .response{
+    align-items: start;
+    margin-top: 2em;
+    display: none;
+}
+.faq-section .sub-section .display-response{
+
+    display: block;
+}
+.faq-section .sub-section .display-response p{
+    text-align: start;
+}
+.icons-faq{
+    cursor: pointer;
+}

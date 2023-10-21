@@ -1,0 +1,39 @@
+footer .footer-container{
+    background-color: var(--Very-Dark-Blue);
+    padding-block: 1em;
+
+   
+} 
+.white-logo,
+.icons-footer,
+.footer-container ul.footer li{
+    margin-inline: auto;
+}
+.icons-footer{
+    gap:10px;
+}
+
+@media (min-width: 720px) {
+    .footer-container{
+grid-template-columns:1fr 2fr 1fr;
+justify-content: center;
+align-items: center;
+padding-block: unset !important;
+
+
+    }
+    ul.footer {
+        display: flex;
+        gap: 1em;
+     
+    }
+
+    .white-logo,
+    .icons-footer{
+        justify-self: center;
+    }
+    .footer-container ul.footer li{
+        margin-inline: unset;
+    }
+}
+

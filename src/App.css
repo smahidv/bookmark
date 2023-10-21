@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@import url(./global.css);
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+:root {
+    --Soft-Blue: hsl(231, 69%, 60%);
+    --Soft-Red: hsl(0, 94%, 66%);
+    --Grayish-Blue: hsl(228, 7%, 58%);
+    --Very-Grayish-Blue: hsl(232, 4%, 38%);
+    --Very-Dark-Blue: hsl(229, 31%, 21%);
+    --Very-Dark-Blue-transparent: hsl(229 31% 21% / 0.9);
+    --f-f:'Rubik', sans-serif;
+    --f-w-bold:500;
+    --f-w-light:400; 
+    --p-2:min(3vh,4em);
+    --margin-left:min(5%,5em);
+    --box-shadow-color:rgb(241, 236, 236);
+    --box-shadow:0 4px 7px 3px var(--box-shadow-color);
+    --responsive-padding:min(6%,3em);
+    --btn-padding:0.6em 1em;
+    --btn-fs:clamp(.7rem,3vw,.8rem);
   }
+p,li{
+  max-width: 50ch;
+  color: var(--Grayish-Blue);
+  margin-block: 1.3em;
+  justify-self: center;
+  font-size:.88rem;
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+p,h1,h2,h3,h4,button,a,li{
+  font-family: var(--f-f);
+  text-align: center;
+  
+}
+p,h1,h2,h3,h4,button,li{
+  text-transform: capitalize;
+}
+h1,h2,h3,h4 {
+  line-height: 1.2em;
+  font-weight: var(--f-w-bold);
+  color: var(--Very-Dark-Blue);
+  text-transform: capitalize;
+}
+button{
+  font-weight: var(--f-w-bold);
+  cursor: pointer;
+  padding: var(--btn-padding);
+  font-size: var(--btn-fs);
+  border-radius: 0.2rem;
+  border: none;
+  box-shadow: var(--box-shadow);
+ 
+}
+button.blue-btn {
+ 
+  background-color: var(--Soft-Blue);
   color: white;
 }
+ button.blue-btn:hover {
+ 
+  background-color: white;
+  outline: 2px solid var(--Soft-Blue);
+  color: var(--Soft-Blue);
+}
+.features-hero,
+.download-hero,
+.faq-container{
+  margin-inline: var(--margin-left);
+  justify-content: center;
+  align-items: center;
+}
+.responsive-padding{
+  padding-inline: var(--responsive-padding);
+}
+ul.primary-navigation li a ,
+ul.footer li a
+{
+  text-decoration: none;
+  color: white;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size:.7rem;
+  
+}
+ul.primary-navigation li a:hover ,
+ul.footer li a:hover{
+  color: red ;
 
-.App-link {
-  color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

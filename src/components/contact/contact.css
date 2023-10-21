@@ -1,0 +1,93 @@
+.contact-container{
+    padding: 2em;
+    background-color: var(--Soft-Blue);
+    justify-content: center;
+  text-align: center;
+  gap:.5em;
+ 
+}
+.contact-container .info-joined{
+  font-family: var(--f-f);
+  letter-spacing: 7px;
+}
+
+.contact-container .info-joined,
+.contact-container h2{
+  color: white;
+}
+.contact-container form.grid button.red-btn {
+ box-shadow: unset;
+ color: white;
+ background-color: var(--Soft-Red);
+
+}
+.contact-container form.grid button.red-btn:hover {
+
+  color: var(--Soft-Red);
+  background-color: white;
+  outline: 1.8px solid var(--Soft-Red);
+ 
+ }
+.input-container input.contact-input{
+ width: 100%;
+ border: none;
+ outline: none;
+}
+.input-container input.contact-input::placeholder{
+ color: var(--Grayish-Blue);
+ font-family: var(--f-f);
+ }
+
+.input-container  img.error{
+    right: 1.5em;
+    top: 17%;
+
+
+ display: none;
+  
+}
+.input-error-container{
+
+  padding: 2px;
+  width: 100%;
+}
+.input-error-container-padding-red{
+  background-color: var(--Soft-Red);
+
+}
+.input-error-container .error-message{
+display: none;
+font-family: var(--f-f) ;
+font-size: .8rem;
+color: white;
+padding-block: auto;
+}
+.invalid{
+  display: block !important;
+}
+.input-container input.contact-input{
+  padding: var(--btn-padding);
+font-size: var(--btn-fs);
+}
+.input-container input.contact-input[type=text] {
+font-family: var(--f-f);
+
+}
+form.grid{
+  padding-block: 1em;
+  gap:1em;
+ 
+
+}
+@media (min-width: 720px) {
+    form.grid {
+      grid-template-columns: 2fr 1fr;
+
+      align-content: start;
+        
+    }  
+  
+    button.red-btn{
+      align-self: start;
+    }
+}

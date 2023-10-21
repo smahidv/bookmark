@@ -1,0 +1,112 @@
+.main-page > *:not(:last-child){
+  margin-bottom: 4em;
+
+}
+.main-page >*:not(.contact-container){
+  width: min(1400px,100%);
+  margin-inline: auto;
+}
+.home-container-2 {
+  margin-bottom: 5em;
+}
+.home-container-2 .description {
+  margin-inline: var(--margin-left);
+}
+
+.description .button-2 {
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+h1 {
+  font-size: clamp(1.4rem, 4vw, 2.5rem);
+}
+
+.description .button-2 button:last-child {
+  background-color: rgb(245, 243, 243);
+  color: var(--Very-Grayish-Blue);
+}
+.description .button-2 button:last-child:hover {
+  background-color: white;
+  outline: 2px solid var(--Very-Dark-Blue);
+}
+
+.hero-image .sub-hero-image{
+position: relative;
+z-index: 33;
+margin-bottom: 4em;
+}
+
+.hero-image .sub-hero-image::after{
+  content: "";
+  position: absolute;
+  width: 91%;
+  height: 82%;
+  top: 23%;
+  right: -20%;
+  background-color: var(--Soft-Blue);
+  border-bottom-left-radius: 38%;
+  z-index: -11;
+  
+  }
+  /* -------------------download-container---------------- */
+  .download-container{
+ 
+    margin-inline: var(--margin-left);
+  }
+  .download-boxes{
+    gap: 2em;
+    justify-content: space-evenly;
+  
+  }
+.download-boxes .box{
+display: grid;
+justify-content: center;
+box-shadow: var(--box-shadow);
+border-radius: .5rem;
+gap: 1em;
+width: fit-content;
+padding: 2em 1em;
+}
+.download-boxes .box img{
+  margin-inline: auto;
+  }
+  .download-boxes .box p{
+    margin: unset !important;
+    font-weight: var(--f-w-bold);
+    }
+    .download-boxes .box h4{
+    justify-self: center;
+      }
+@media (min-width: 720px) {
+  .home-container-2 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+ 
+  }
+  h1,.description p {
+    text-align: start !important;
+  }
+  .description .button-2 {
+    justify-content: start;
+  }
+  .hero-image .sub-hero-image{
+
+    margin-bottom: unset;
+    }
+  /* -------------------download-container---------------- */
+  .download-container{
+    margin-bottom: 8em !important;
+  }
+  .download-boxes{
+   grid-template-columns: repeat(3,1fr);
+  }
+  .download-boxes .box:nth-child(2){
+    transform: translateY(10%);
+   }
+   .download-boxes .box:last-child{
+    transform: translateY(20%);
+   }
+}
