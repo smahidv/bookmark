@@ -1,3 +1,4 @@
+ @import-normalize; 
   *,
   *::before,
   *::after {
@@ -80,7 +81,9 @@
     border: 1px solid red;
   }
  
- 
+ .pointer{
+  cursor: pointer;
+ }
 
 ul{
   list-style: none;

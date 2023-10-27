@@ -1,12 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import tab1 from "../../images/illustration-features-tab-1.svg";
 import tab2 from "../../images/illustration-features-tab-2.svg";
 import tab3 from "../../images/illustration-features-tab-3.svg";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import "./features.css";
 
 const Features = () => {
+  const { ref, inView } = useInView({ 
+    threshold: 0.2
+});
+  const animation = useAnimation();
+  useEffect(() => {
+    console.log("inView:", inView);
+    if (inView) {
+      animation.start({
+        x: 0,
+        transition: { 
+          type: "spring", duration: 1
+        }
+      });
+    }
+    if (!inView) {
+      animation.start({ x: "-100%" });
+    }
+  }, [inView, animation]);
   const [selectedFeature, setSelectedFeature] = useState("Simple Bookmarking");
-
   const featureData = {
     "Simple Bookmarking": {
       title: "Bookmark in one click",
@@ -51,14 +70,22 @@ const Features = () => {
               onClick={() => handleFeatureClick(feature)}
             >
               <p>{feature}</p>
-              {selectedFeature === feature && <div className="red-underline"></div>}
+              {selectedFeature === feature && (
+                <div className="red-underline"></div>
+              )}
             </li>
           ))}
         </ul>
-        <div className="features-slide-2 grid">
-          <div className="images-slides relative">
-            <img src={featureData[selectedFeature].image} alt={selectedFeature} />
-          </div>
+        <div className="features-slide-2 grid" ref={ref}>
+          <motion.div 
+          className="images-slides relative" 
+          animate={animation}
+          >
+            <img
+              src={featureData[selectedFeature].image}
+              alt={selectedFeature}
+            />
+          </motion.div>
           <div className="description-slides ">
             <h3>{featureData[selectedFeature].title}</h3>
             <p>{featureData[selectedFeature].description}</p>

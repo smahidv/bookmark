@@ -18,6 +18,7 @@
     --btn-padding:0.6em 1em;
     --btn-fs:clamp(.7rem,3vw,.8rem);
   }
+
 p,li{
   max-width: 50ch;
   color: var(--Grayish-Blue);

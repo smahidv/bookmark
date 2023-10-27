@@ -51,7 +51,7 @@ const Contact = () => {
             )}
           </div>
         </div>
-        <button className="red-btn">contact Us</button>
+        <button className={`red-btn ${ isValidEmail ? "" :"height-unset"}`}>contact Us</button>
       </form>
     </div>
   );

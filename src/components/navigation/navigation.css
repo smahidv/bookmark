@@ -1,5 +1,7 @@
 .navigation-container {
   padding: calc(var(--p-2) + 1em) var(--p-2);
+ 
+ 
   
 }
 .primary-header-2 {
@@ -35,31 +37,31 @@ ul.primary-navigation li {
   display: flex;
   cursor: pointer;
   align-items: center;
+  color: white;
+  margin-block: unset !important;
 
- 
 }
-
-ul.primary-navigation li:first-child::before,
-ul.primary-navigation li:first-child::after,
-ul.primary-navigation li:nth-child(3):before,
-ul.primary-navigation li:nth-child(3):after {
-  content: "";
+ul.primary-navigation li:first-child:after,
+ul.primary-navigation li:first-child:before,
+ul.primary-navigation li.pricingLine:after,
+ul.primary-navigation li.contactLine:after{
   position: absolute;
+  content: "";
   width: 100%;
-  border-radius: 0.5rem;
-  height: 1px;
+  height: .5px;
   background-color: var(--Grayish-Blue);
-  top: 60px;
- 
 }
-ul.primary-navigation li:first-child::before,
-ul.primary-navigation li:nth-child(3):before {
+ul.primary-navigation li:first-child:before{
   top: 0;
 }
-ul.primary-navigation li:first-child::after,
-ul.primary-navigation li:nth-child(3):after {
- bottom: 0;
+ul.primary-navigation li:first-child:after,
+ul.primary-navigation li.pricingLine:after,
+ul.primary-navigation li.contactLine:after{
+  bottom: 0;
 }
+
+
+
 
 li.login-btn {
   width: 100%;
@@ -101,12 +103,7 @@ nav .icons-footer{
 
  
 
-  ul.primary-navigation li:first-child::before,
-ul.primary-navigation li:first-child::after,
-ul.primary-navigation li:nth-child(3):before,
-ul.primary-navigation li:nth-child(3):after  {
-    all: unset;
-  }
+
   .icon-nav {
     display: none;
   }
@@ -119,13 +116,13 @@ ul.primary-navigation li:nth-child(3):after  {
     transform: unset;
     background-color: var(--Soft-Red);
     padding-inline: 2.5em;
- 
- 
+    
   }
   li.login-btn:hover{
     background-color: white;
     outline: 1.8px solid var(--Soft-Red);
     box-shadow: var(--box-shadow);
+    color: var(--Soft-Red);
    
   }
   li.login-btn:hover a{
@@ -145,6 +142,12 @@ ul.primary-navigation li:nth-child(3):after  {
   nav ul.primary-navigation li:not(.login-btn) {
     line-height: unset;
   }
+  ul.primary-navigation li:first-child:after,
+ul.primary-navigation li:first-child:before,
+ul.primary-navigation li.pricingLine:after,
+ul.primary-navigation li.contactLine:after{
+  all:unset;
+}
   
   
 }

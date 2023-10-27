@@ -19,13 +19,14 @@
  box-shadow: unset;
  color: white;
  background-color: var(--Soft-Red);
+ height: 100%;
 
 }
 .contact-container form.grid button.red-btn:hover {
 
   color: var(--Soft-Red);
   background-color: white;
-  outline: 1.8px solid var(--Soft-Red);
+  outline: 2px solid var(--Soft-Red);
  
  }
 .input-container input.contact-input{
@@ -76,18 +77,21 @@ font-family: var(--f-f);
 form.grid{
   padding-block: 1em;
   gap:1em;
- 
+  
 
 }
 @media (min-width: 720px) {
     form.grid {
       grid-template-columns: 2fr 1fr;
 
-      align-content: start;
+      align-items: start;
         
     }  
   
     button.red-btn{
       align-self: start;
+    }
+    .height-unset{
+      height: unset !important;
     }
 }

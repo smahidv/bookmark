@@ -1,5 +1,5 @@
 import React from "react";
-import './pricing.css'
+import "./pricing.css";
 
 const Pricing = () => {
   return (
@@ -7,15 +7,11 @@ const Pricing = () => {
       <div className="container grid mx-auto">
         <div className="w-full px-4">
           <div className="mx-auto mb-[60px] max-w-[510px] text-center lg:mb-20">
-            <span className="block mb-2 text-lg font-semibold text-primary">
-              Pricing Table
-            </span>
             <h2 className="mb-4 text-3xl font-bold text-dark sm:text-4xl md:text-[40px]">
-              Our Pricing Plan
+              Pick the plan that works best for you!
             </h2>
             <p className="text-base text-body-color">
-              There are many variations of passages of Lorem Ipsum available but
-              the majority have suffered alteration in some form.
+              No contracts. Upgrade or cancel at anytime.
             </p>
           </div>
         </div>
@@ -26,7 +22,7 @@ const Pricing = () => {
               type="Personal"
               price="$59"
               subscription="year"
-              description="Perfect for using in a personal website or a client project."
+              description="For entrepreneurs building or growing their eCommerce business."                                                                                                                                               
               buttonText="Choose Personal"
             >
               <List>1 User</List>
@@ -40,7 +36,8 @@ const Pricing = () => {
               type="Business"
               price="$199"
               subscription="year"
-              description="Perfect for using in a personal website or a client project."
+              description="For thought leaders in need of a digital presence with no online
+              store"
               buttonText="Choose Business"
               active
             >

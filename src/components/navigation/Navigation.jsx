@@ -47,7 +47,9 @@ const Navigation = () => {
     <header>
       <div id="menu-open-bg" className="navigation-container">
         <div className="primary-header-2 flex">
+        <Link to="/" >
           <img src={isMenuOpen ? whiteLogo : logo} alt="logo of bookmark" />
+        </Link>
           <div className="icon-nav">
             <div onClick={toggleMenu} className={isMenuOpen ? "close" : "hamburger"}>
               {isMenuOpen ? (
@@ -67,21 +69,24 @@ const Navigation = () => {
                 </Link>
               </li>
           
-            <li>
+            <li className="pricingLine">
               <Link to="/pricing" onClick={isSmallScreen ? toggleMenu : null}>
                 pricing
               </Link>
             </li>
-            <li>
+            <li className="contactLine">
               <Link to="/#contact" onClick={isSmallScreen ? toggleMenu : null}>
                 contact
               </Link>
             </li>
-            <li className="login-btn">
-              <Link to="/login" onClick={isSmallScreen ? toggleMenu : null}>
+            
+              <Link  to="/login" onClick={isSmallScreen ? toggleMenu : null}>
+              <li className="login-btn" >
                 login
+                </li>
               </Link>
-            </li>
+
+            
           </ul>
           {isMenuOpen && (
             <div className="icons-footer flex">

@@ -8,9 +8,9 @@ const Faq = () => {
   const [sections, setSections] = useState(
     [
       { question: "what is Bookmark ?", response, isOpen: false },
-      { question: "How can I request a new browser?", response, isOpen: false },
-      { question: "Is there a mobile app?", response, isOpen: false },
-      { question: "What about other Chromium browsers?", response, isOpen: false },
+      { question: "How can I request a new browser ?", response, isOpen: false },
+      { question: "Is there a mobile app ?", response, isOpen: false },
+      { question: "What about other Chromium browsers ?", response, isOpen: false },
     ],
   );
 
@@ -38,17 +38,15 @@ const Faq = () => {
       <div className="faq-section">
         {sections.map((section, index) => (
           <div className="sub-section" key={index}>
-             <div className={`question flex ${section.isOpen ? 'active' : ''}`}>
+             <div className={`question flex pointer ${section.isOpen ? 'active' : ''}`} onClick={() => toggleSection(index)}>
               <h4>{section.question}</h4>
               <div className="icons-faq">
                 {section.isOpen ? (
                   <IoIosArrowUp
-                    onClick={() => toggleSection(index)}
                     style={{ color: "var(--Soft-Red)" }}
                   />
                 ) : (
                   <IoIosArrowDown
-                    onClick={() => toggleSection(index)}
                     style={{ color: "var(--Soft-Blue)" }}
                   />
                 )}
